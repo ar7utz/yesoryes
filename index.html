@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quer sair cmg?</title>
+  </head>
+
+  <style>
+    h2{
+        margin-top: 200px;
+    }
+
+    #meio {
+    background: #FFC0CB;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    }
+
+    .btn {
+    background: #E6E6FA;
+    color: #000;
+    font: bold;
+    font-style: italic;
+    border: none;
+    padding: 10px;
+    width: 80px;
+    border-radius: 5px;
+    margin-top: 50px;
+    cursor: pointer;
+    }
+
+    btn:hover{
+        color: #000;
+    }
+  </style>
+
+  <body>
+    <div id="meio">
+      <h2>Quer sair cmg?</h2>
+      <button class="btn" onclick="sim()">SIM</button>
+      <button class="btn" onclick="driblando(this)" onmouseover="driblando(this)">
+        NÃO
+      </button>
+    </div>
+  </body>
+
+  <script>
+    function sim() {
+      location.href = "https://www.youtube.com/watch?v=izGwDsrQ1eQ&pp=ygUQY2FyZWxlc3Mgd2hpc3Blcg%3D%3D";
+    }
+
+    function driblando(btn) {
+      btn.style.position = "absolute";
+      btn.style.bottom = novaposicao(15, 90);
+      btn.style.left = novaposicao(15, 90);
+      console.log("driblada");
+    }
+
+    function novaposicao(min, max) {
+      return Math.random() * (max - min) + min + "%";
+    }
+  </script>
+</html>
